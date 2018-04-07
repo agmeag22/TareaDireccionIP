@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">IP Address Calculator</string>
-    <string name="ip">IP</string>
+    <string name="ip">IP 0.0.0.0</string>
     <string name="subnet">SUBNET</string>
     <string name="net_id">Net ID</string>
     <string name="broadcast">Broadcast</string>

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="#000000">
+    android:background="#cd000000">
 
     <LinearLayout
         android:id="@+id/inputs"
@@ -19,15 +19,24 @@
             android:layout_height="wrap_content"
             android:layout_weight="3"
             android:ems="10"
+            android:textColor="#e6ffffff"
             android:digits="0123456789."
             android:textAlignment="center"
             android:layout_marginLeft="8dp"
             android:hint="@string/ip"
-            android:textColorHint="#3f4f5056"
+            android:textColorHint="#8cffffff"
             android:textStyle="bold"
+            android:inputType="number"
             />
-
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:text="/"
+            android:textColor="#e6ffffff"/>
         <EditText
+            android:textColor="#e6ffffff"
             android:id="@+id/clientsubnet"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -37,10 +46,11 @@
             android:textAlignment="center"
             android:layout_marginRight="8dp"
             android:hint="@string/subnet"
-            android:textColorHint="#3f4f5056"
+            android:textColorHint="#8cffffff"
             android:textStyle="bold"
-            android:inputType="textPersonName" />
+            android:inputType="number" />
     </LinearLayout>
+
     <TextView
         android:id="@+id/netidtext"
         android:layout_below="@id/inputs"
@@ -49,7 +59,7 @@
         android:textAlignment="center"
         android:textSize="15sp"
         android:textStyle="bold"
-        android:textColor="#ecffffff"
+        android:textColor="#ecf4dfdf"
         android:background="@color/colorPrimaryDark"
         android:text="@string/net_id"/>
     <EditText
@@ -61,7 +71,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:enabled="false"
-
+        android:textColor="#e6ffffff"
         android:textStyle="bold"
 
         />
@@ -73,7 +83,7 @@
         android:textAlignment="center"
         android:textSize="15sp"
         android:textStyle="bold"
-        android:textColor="#ecffffff"
+        android:textColor="#ecf4dfdf"
         android:background="#d64f5056"
 
         android:text="@string/broadcast"/>
@@ -87,6 +97,7 @@
         android:textAlignment="center"
         android:enabled="false"
         android:textStyle="bold"
+        android:textColor="#e6ffffff"
         />
     <TextView
         android:id="@+id/mascaratext"
@@ -96,7 +107,7 @@
         android:textAlignment="center"
         android:textSize="15sp"
         android:textStyle="bold"
-        android:textColor="#ecffffff"
+        android:textColor="#ecf4dfdf"
         android:background="#c84f5056"
         android:text="Mascara de red"/>
     <EditText
@@ -109,6 +120,7 @@
         android:textAlignment="center"
         android:enabled="false"
         android:textStyle="bold"
+        android:textColor="#e6ffffff"
         />
 
     <LinearLayout
@@ -132,7 +144,7 @@
                 android:text="@string/total_ips"
                 android:textAlignment="center"
                 android:textStyle="bold"
-                android:textColor="#ffffff"
+                android:textColor="#ecf4dfdf"
                 android:background="#b94f5056"/>
 
             <EditText
@@ -145,6 +157,7 @@
                 android:textColorHint="#3f4f5056"
                 android:hint="0"
                 android:textStyle="bold"
+                android:textColor="#e6ffffff"
                 android:textAlignment="center" />
         </LinearLayout>
 
@@ -170,7 +183,7 @@
                 android:background="#a54f5056"
                 android:text="@string/hosts"
                 android:textAlignment="center"
-                android:textColor="#ffffff"
+                android:textColor="#ecf4dfdf"
                 android:textStyle="bold" />
 
             <EditText
@@ -182,7 +195,8 @@
                 android:hint="0"
                 android:textAlignment="center"
                 android:textColorHint="#3f4f5056"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:textColor="#e6ffffff"/>
         </LinearLayout>
 
         <LinearLayout
@@ -199,7 +213,7 @@
                 android:background="#9b4f5056"
                 android:text="@string/bits_de_red"
                 android:textAlignment="center"
-                android:textColor="#ffffff"
+                android:textColor="#ecf4dfdf"
                 android:textStyle="bold" />
 
             <EditText
@@ -212,7 +226,8 @@
                 android:hint="0"
                 android:textAlignment="center"
                 android:textColorHint="#3f4f5056"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:textColor="#e6ffffff"/>
         </LinearLayout>
 
         <LinearLayout
@@ -229,7 +244,7 @@
                 android:background="#914f5056"
                 android:text="@string/bits_de_host"
                 android:textAlignment="center"
-                android:textColor="#ffffff"
+                android:textColor="#ecf4dfdf"
                 android:textStyle="bold" />
 
             <EditText
@@ -242,7 +257,8 @@
                 android:hint="@string/_0"
                 android:textAlignment="center"
                 android:textColorHint="#3f4f5056"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:textColor="#e6ffffff"/>
         </LinearLayout>
     </LinearLayout>
 
@@ -255,7 +271,7 @@
         android:layout_below="@+id/layoutbits"
         android:background="#e9ba1e1e"
         android:textStyle="bold"
-        android:textColor="#ffffff"
+        android:textColor="#e6ffffff"
         android:onClick="calcular"
         android:text="@string/calcular" />
 </RelativeLayout>

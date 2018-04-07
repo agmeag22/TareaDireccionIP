@@ -1,8 +1,5 @@
 package com.meag.ipaddress;
 
-/**
- * Created by elect on 22/03/2018.
- */
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

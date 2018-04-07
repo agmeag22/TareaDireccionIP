@@ -1,16 +1,15 @@
 package com.meag.ipaddress;
 
 import android.util.Log;
+import android.widget.EditText;
+
 import java.lang.Math;
 
-/**
- * Created by elect on 22/03/2018.
- */
 
 public class NetOp {
 
     //Devuelve un arreglo de tipo string de 5 posiciones con netid,broadcast,totalips, cantidad de hosts y la mascara en forma 255.255... etc
-    public String[] generateIPs(String ip,String subnet){
+    public void generateIPs(EditText clientip, EditText clientsubnet, EditText totalips, EditText clientips, EditText netid,EditText mask,EditText bitshost, EditText bitsred,EditText broadcastedittext, String ip,String subnet ){
         String[] res = new String[7];
         int  n_subnet = Integer.parseInt(subnet); // cantidad de bits de la mascara
         String net_id="",broadcast="",n_mask=""; // en estas string se iran almacenando los numeros generados y concatenandolos
@@ -35,6 +34,7 @@ public class NetOp {
 
            // Log.d("OCTETOS", Integer.parseInt(ip_octet[i]) + "=" + Integer.parseInt(s_mask.substring(i * 8,i*8+8),2) +" generateIPs: "+net_id);
         }
+
         res[0] = net_id.substring(0,net_id.length()-1); // Se elimina un punto  adicional que queda en las cadenas
         res[1] = broadcast.substring(0,broadcast.length()-1);
         res[2] = String.format("%.0f",Math.pow(2,32-n_subnet)); // Se calcula la cantidad de ips
@@ -42,6 +42,12 @@ public class NetOp {
         res[4] = n_mask.substring(0,n_mask.length()-1);
         res[5] = ""+ (32 - n_subnet);
         res[6] = ""+ n_subnet;
-        return res;
+        netid.setText(res[6]);4
+        broadcastedittext.setText(res[5]);
+        totalips.setText(res[2]);
+        clientips.setText(res[3]);
+        mask.setText(res[6]);
+        bitshost.setText(res[0]);
+        bitsred.setText(res[1]);
     }
 }
